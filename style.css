@@ -1,79 +1,135 @@
-body {
+/* 🌍 Basic Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial, sans-serif;
-  background: #f9fafb;
+  line-height: 1.6;
+  background: #f4f4f4;
   color: #333;
 }
 
-/* Navbar */
+/* 🌍 Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* 🌍 Navbar */
 .navbar {
-  background: #0f62fe;
-  color: white;
-  padding: 1rem 0;
+  background: #333;
+  color: #fff;
+  padding: 15px 0;
 }
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.navbar .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-.navbar a {
-  color: white;
-  text-decoration: none;
-}
-.navbar a.active {
+
+.navbar .logo {
+  float: left;
+  font-size: 22px;
   font-weight: bold;
+  margin-left: 20px;
+}
+
+.navbar .nav-links {
+  float: right;
+  list-style: none;
+}
+
+.navbar .nav-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links .active {
   text-decoration: underline;
 }
 
-/* Hero */
+/* 🌍 Hero Section */
 .hero {
-  background: url('https://picsum.photos/1200/500') no-repeat center center/cover;
-  color: white;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #444;
+  color: #fff;
+  padding: 80px 20px;
   text-align: center;
 }
-.hero-content h2 {
+
+.hero h2 {
   font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-/* Sections */
-.container {
-  width: 80%;
-  margin: auto;
-  padding: 2rem 0;
-}
-.grid {
-  display: flex;
-  gap: 1rem;
-}
-.card {
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
-/* Buttons */
 .btn {
-  background: #0f62fe;
-  color: white;
+  display: inline-block;
+  background: #ff6600;
+  color: #fff;
   padding: 10px 20px;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-/* Footer */
-footer {
-  background: #111827;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+.btn:hover {
+  background: #e55b00;
 }
+
+/* 🌍 Footer */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* 🌍 Responsive Design */
+@media (max-width: 768px) {
+  .navbar .logo,
+  .navbar .nav-links {
+    float: none;
+    text-align: center;
+  }
+
+  .navbar .nav-links li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
