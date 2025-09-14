@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">Acme Solutions</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="article.html">Articles</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="container">
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="return handleSubmit(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+      <p id="formStatus"></p>
+    </form>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Acme Solutions | All Rights Reserved</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
